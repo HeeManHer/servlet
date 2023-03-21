@@ -1,0 +1,9 @@
+package com.greedy.section02.formdata;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/formdata")
+public class FormDataTestServlet extends HttpServlet {
+
+}

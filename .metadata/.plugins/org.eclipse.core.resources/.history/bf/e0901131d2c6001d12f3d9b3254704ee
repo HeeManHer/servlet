@@ -1,0 +1,26 @@
+package com.greedy.section01.servicemethod;
+
+import javax.servlet.ServletConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/request-service")
+public class ServiceMethodTestServlet extends HttpServlet {
+
+	public ServiceMethodTestServlet() {
+	}
+
+	@Override
+	public void init(ServletConfig config) {
+	}
+
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+	}
+
+	@Override
+	public void destroy() {
+	}
+}

@@ -1,0 +1,26 @@
+package com.greedy.section01.forward;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/print")
+public class PrintLoginInfomationServlet extends HttpServlet {
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("print servlet 호출");
+
+		String id = (String) request.getAttribute("id");
+		String pass = (String) request.getAttribute("pass");
+
+		System.out.println("forward된 id : " + id);
+		
+		StringBuilder responseText=new StringBuilder();
+		responseText.append("<!doctype html>\n)
+	}
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 align="center">Request Parameter</h1>
+	<form action="querystring" method="get">
+	<label>name : </label>
+	<input type="text" name="name">
+	<br>
+	
+	<label>age : </label>
+	<input type="number" name="age">
+	<br>
+	
+	<label>birth : </label>
+	<input type="date" name="birth">	
+	<br>
+	
+	<label>gender : </label>
+	<input type="radio" name="gender" id="male" value="M">
+	<label for="male">Male</label>
+	<input type="radio" name="gender" id="female" value="F">
+	<label for="frmale">female</label>
+	<br>
+	
+	<input type="submit" value="GET 요청">
+	
+	</form>
+</body>
+</html>

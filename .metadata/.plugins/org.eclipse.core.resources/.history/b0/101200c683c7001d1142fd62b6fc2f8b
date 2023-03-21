@@ -1,0 +1,11 @@
+package com.greedy.section02.server;
+
+import java.net.ServerSocket;
+
+public class Application {
+
+	public static void main(String[] args) {
+ServerSocket serv=new ServerSocket(8002);
+	}
+
+}

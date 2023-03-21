@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 align="center">Redirect</h1>
+<ul>
+	<li><a>네이버로 이동</a></li>
+</ul>
+</body>
+</html>

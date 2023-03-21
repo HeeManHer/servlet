@@ -1,0 +1,27 @@
+package com.greedy.section01.headers;
+
+import java.util.Enumeration;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/headers")
+public class RequestHeaderPrintServelt extends HttpServlet {
+
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+		/* 헤더의 종류
+		 * 1. General Header
+		 * 2. Request Header
+		 * 3. Response Header
+		 * 4.Entity Header
+		 * */
+
+		Enumeration<String> headerNames = request.getHeaderNames();
+		while (headerNames.hasMoreElements()) {
+			System.out.println(headerNames.nextElement());
+		}
+	}
+}

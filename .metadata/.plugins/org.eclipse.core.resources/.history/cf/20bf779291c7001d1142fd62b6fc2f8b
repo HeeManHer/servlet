@@ -1,0 +1,27 @@
+package com.greedy.section01.exception;
+
+import java.io.IOException;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/showErrorPage")
+public class ExceptionHadlerServlet extends HttpServlet {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("에러 포워딩 확인");
+		Enumeration<String> attrNames = request.getAttributeNames();
+		while (attrNames.hasMoreElements()) {
+			System.out.println(attrNames.nextElement());
+		}
+
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	}
+
+}

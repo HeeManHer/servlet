@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;chap01-life-cycle-lecture-source/src/main/java/coms&apos; to &apos;com&apos;" description="Rename resource &apos;coms&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/coms" name="com" stamp="1679281703708" updateReferences="true"/>
+</session>

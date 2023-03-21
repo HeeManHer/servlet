@@ -1,0 +1,25 @@
+package com.greedy.section02.server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Application {
+
+	public static void main(String[] args) throws IOException {
+		ServerSocket serv = new ServerSocket(8002);
+
+		int cnt=1;
+		
+		System.out.println("Http Server started at 8002 port");
+		
+		while(true) {
+			Socket socket= serv.accept();
+			
+			System.out.println("New Client Connect!! connected IP : "+
+			socket.getInetAddress()+", Port : "+socket.getPort()
+					);
+		}
+	}
+
+}

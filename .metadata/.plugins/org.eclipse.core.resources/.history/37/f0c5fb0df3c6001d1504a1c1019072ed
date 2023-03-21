@@ -1,0 +1,34 @@
+package com.greedy.section01.querystring;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/querystring")
+public class QueryStringTestServlet extends HttpServlet {
+
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+
+		String name = request.getParameter("name");
+		System.out.println("name : " + name);
+
+		int age = Integer.parseInt(request.getParameter("age"));
+		System.out.println("age : " + age);
+
+		String birth = request.getParameter("birth");
+		String[] sarr = birth.split("-");
+
+		int[] iarr = new int[3];
+		for (int i = 0; i < iarr.length; i++) {
+			iarr[i] = Integer.parseInt(sarr[i]);
+		}
+		
+		int year=iarr[0];
+		int month=iarr[1];
+		int day=iarr[2];
+		
+		System.out.println("birth : " + birth);
+	}
+}

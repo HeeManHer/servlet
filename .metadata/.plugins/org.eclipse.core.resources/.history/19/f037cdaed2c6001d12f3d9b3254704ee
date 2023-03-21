@@ -1,0 +1,38 @@
+package com.greedy.section01.servicemethod;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/request-service")
+public class ServiceMethodTestServlet extends HttpServlet {
+
+	public ServiceMethodTestServlet() {
+	}
+
+	public void service(HttpServletRequest request, HttpServletResponse response) {
+
+		String httpMethod = request.getMethod();
+		
+		System.out.println("httpMethod : " + httpMethod);
+		
+		if("GET".equals(httpMethod)) {
+			
+		}else if("POST".equals(httpMethod)) {
+			
+		}
+	}
+
+	// @Override
+	// public void init(ServletConfig config) {
+	// }
+	//
+	// @Override
+	// public void doGet(HttpServletRequest request, HttpServletResponse response) {
+	// }
+	//
+	// @Override
+	// public void destroy() {
+	// }
+}

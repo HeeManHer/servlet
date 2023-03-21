@@ -1,0 +1,41 @@
+package com.greedy.section02.server;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Application {
+
+	public static void main(String[] args) throws IOException {
+		ServerSocket serv = new ServerSocket(8002);
+
+		int cnt = 1;
+
+		System.out.println("Http Server started at 8002 port");
+
+		while (true) {
+			Socket sock = serv.accept();
+
+			System.out.println("New Client Connect!! connected IP : " + sock.getInetAddress() + ", Port : " + sock.getPort());
+
+			cnt++;
+
+			InputStream in = sock.getInputStream();
+			OutputStream out = sock.getOutputStream();
+
+			int value = 0;
+			while ((value = in.read()) != -1 && cnt == 3) {
+				System.out.print((char) value);
+			}
+			
+			String responseText="<h1>Hello World!</h1>";
+			
+			String resGenHead="Http/1.1 200 OK \r\n";
+
+			// sock.close();
+			// serv.close();
+		}
+	}
+}

@@ -1,0 +1,40 @@
+package com.greedy.section01.querystring;
+
+import java.util.Map;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/querystring")
+public class QueryStringTestServlet extends HttpServlet {
+
+	@Override
+	public void doGet(HttpServletRequest request, HttpServletResponse response) {
+
+		String name = request.getParameter("name");
+		System.out.println("name : " + name);
+
+		int age = Integer.parseInt(request.getParameter("age"));
+		System.out.println("age : " + age);
+
+		java.sql.Date birth = java.sql.Date.valueOf(request.getParameter("birth"));
+		System.out.println("birth : " + birth);
+
+		String gender = request.getParameter("gender");
+		System.out.println("gender:  " + gender);
+
+		String national = request.getParameter("national");
+		System.out.println("national : " + national);
+
+		String[] hobby = request.getParameterValues("hobby");
+		for (String s : hobby) {
+			System.out.println(s);
+		}
+
+		System.out.println("=============================");
+		Map<String, String[]> map = request.getParameterMap();
+		System.out.println(map);
+	}
+}
